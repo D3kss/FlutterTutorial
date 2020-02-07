@@ -173,7 +173,7 @@ class _OverlayEntryWidgetState extends State<_OverlayEntryWidget> {
   @override
   Widget build(BuildContext context) {
     return TickerMode(
-      enabled: widget.tickerEnabled,
+      enabled: widget.tickerEnabled && TickerMode.of(context),
       child: widget.entry.builder(context),
     );
   }
